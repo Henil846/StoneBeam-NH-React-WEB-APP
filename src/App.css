@@ -1,0 +1,131 @@
+:root {
+  
+  /* Primary Palette */
+  --sb-purple: #7b2cbf;
+  --sb-purple-light: #9d4edd;
+  --sb-purple-dark: #5a189a;
+  --sb-purple-glow: rgba(123, 44, 191, 0.3);
+  --sb-purple-subtle: rgba(123, 44, 191, 0.1);
+
+  /* Surface Colors */
+  --sb-bg-primary: #0a0a0f;
+  --sb-bg-secondary: #111118;
+  --sb-bg-card: rgba(255, 255, 255, 0.04);
+  --sb-bg-card-hover: rgba(255, 255, 255, 0.08);
+  --sb-bg-input: rgba(255, 255, 255, 0.06);
+
+  /* Text Colors */
+  --sb-text-primary: #ffffff;
+  --sb-text-secondary: #b0b0b0;
+  --sb-text-muted: #666666;
+  --sb-text-accent: #c084fc;
+
+  /* Border */
+  --sb-border: rgba(255, 255, 255, 0.08);
+  --sb-border-hover: rgba(255, 255, 255, 0.15);
+  --sb-border-focus: #7b2cbf;
+
+  /* Status */
+  --sb-success: #2ecc71;
+  --sb-error: #e74c3c;
+  --sb-warning: #f39c12;
+  --sb-info: #3498db;
+
+  /* Spacing */
+  --sb-radius-sm: 8px;
+  --sb-radius-md: 12px;
+  --sb-radius-lg: 16px;
+  --sb-radius-xl: 20px;
+
+  /* Shadows */
+  --sb-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --sb-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --sb-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.35);
+  --sb-shadow-glow: 0 4px 20px rgba(123, 44, 191, 0.3);
+
+  /* Typography */
+  --sb-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sb-font);
+  background-color: var(--sb-bg-primary);
+  color: var(--sb-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: var(--sb-font);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sb-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Utility ─── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--sb-purple-light), #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Override Bootstrap defaults that conflict */
+.btn:focus, .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(123, 44, 191, 0.2) !important;
+  border-color: var(--sb-purple) !important;
+}

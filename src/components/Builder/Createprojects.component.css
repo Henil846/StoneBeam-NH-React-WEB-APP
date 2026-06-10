@@ -1,0 +1,57 @@
+/* Wrapper for dark theme */
+.dark-theme {
+  background-color: #121212;
+  padding: 20px;
+  border-radius: 12px;
+  color: #111111;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form group */
+.dark-theme .sb-form-group {
+  margin-bottom: 15px;
+}
+
+/* Label */
+.dark-theme label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #b0b0b0;
+}
+
+/* Input + Select */
+.dark-theme .sb-input {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Flex row */
+.dark-theme .duration-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* Focus effect */
+.dark-theme .sb-input:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 5px rgba(76, 175, 239, 0.4);
+}
+
+/* Placeholder */
+.dark-theme .sb-input::placeholder {
+  color: #777;
+}
+
+/* Select arrow fix */
+.dark-theme select {
+  appearance: none;
+  cursor: pointer;
+}

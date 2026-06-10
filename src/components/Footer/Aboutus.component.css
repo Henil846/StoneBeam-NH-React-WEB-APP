@@ -1,0 +1,58 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.aboutus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.hero-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(../src/assets/about2.png) no-repeat center center/cover;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.section-padding {
+  padding: 80px 40px;
+}
+
+.about-image {
+  max-height: 450px;
+  object-fit: cover;
+}
+
+.dark-card {
+  background-color: #111111;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box {
+  background-color: #111111;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+
+.stat-box h3 {
+  font-weight: 700;
+  font-size: 28px;
+}
