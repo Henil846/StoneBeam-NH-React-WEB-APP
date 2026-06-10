@@ -3,9 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../shared/SharedComponents';
 import { ROLES, LOCATIONS } from '../../data/mockData';
+import API_BASE from '../../config/api';
 import './Auth.css';
-
-const API_BASE = 'http://localhost:3000/api';
 
 const Signup = () => {
   // ─── Step Management ───

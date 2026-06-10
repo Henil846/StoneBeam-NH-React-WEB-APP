@@ -1,6 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-
-const API_BASE = 'http://localhost:3000/api';
+import API_BASE from '../config/api';
 
 const AuthContext = createContext(null);
 

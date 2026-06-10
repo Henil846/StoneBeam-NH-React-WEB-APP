@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useData } from '../../context/DataContext';
 import { useToast } from '../shared/SharedComponents';
 import { EmptyState } from '../shared/SharedComponents';
+import API_BASE from '../../config/api';
 import '../../components/shared/shared.css';
 
 const statusColors = {
@@ -22,7 +23,7 @@ const Orderstatus = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/orderStatus/orderStatus', {
+        const res = await fetch(`${API_BASE}/orderStatus/orderStatus`, {
           credentials: 'include',
         });
         const data = await res.json();

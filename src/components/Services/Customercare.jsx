@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useToast } from '../shared/SharedComponents';
 import { mockFAQs } from '../../data/mockData';
+import API_BASE from '../../config/api';
 import '../../components/shared/shared.css';
 
 const Customercare = () => {
@@ -15,7 +16,7 @@ const Customercare = () => {
       return;
     }
     try {
-      const res = await fetch('http://localhost:3000/api/customerCare/customerCare', {
+      const res = await fetch(`${API_BASE}/customerCare/customerCare`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

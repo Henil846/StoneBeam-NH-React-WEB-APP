@@ -3,6 +3,7 @@ import { useData } from '../../context/DataContext';
 import { useToast } from '../shared/SharedComponents';
 import { ProjectCard, EmptyState, Modal } from '../shared/SharedComponents';
 import { LOCATIONS, PROJECT_TYPES } from '../../data/mockData';
+import API_BASE from '../../config/api';
 import '../../components/shared/shared.css';
 import './Createprojects.component.css';
 const Createprojects = () => {
@@ -28,7 +29,7 @@ const Createprojects = () => {
     if (!validate()) return;
 
     try {
-      const res = await fetch('http://localhost:3000/api/createProject/createProject', {
+      const res = await fetch(`${API_BASE}/createProject/createProject`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
