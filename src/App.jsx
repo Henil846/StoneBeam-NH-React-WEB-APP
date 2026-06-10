@@ -2,7 +2,7 @@ import "./App.css";
 import Firstpage from "./components/First_page/Firstpage";
 import Build from "./components/Builder/builder";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Deal from "./components/Dealer/dealer";
 import Client from "./components/Client/client";
 import Contract from "./components/Contractor/contractor";
@@ -20,7 +20,7 @@ import NotFound from "./components/Auth/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Firstpage />} />
         <Route path="/login" element={<Login />} />
@@ -39,7 +39,7 @@ function App() {
         <Route path="/Press" element={<Press />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
