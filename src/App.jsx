@@ -14,6 +14,8 @@ import Blog from "./components/Footer/Blog";
 import Guides from "./components/Footer/Guides";
 import HelpCenter from "./components/Footer/HelpCenter";
 import Press from "./components/Footer/Press";
+import Terms from "./components/Footer/Terms";
+import PrivacyPolicy from "./components/Footer/PrivacyPolicy";
 import Login from "./components/Auth/Login";
 import Signup from "./components/Auth/Signup";
 import NotFound from "./components/Auth/NotFound";
@@ -37,6 +39,8 @@ function App() {
         <Route path="/Guides" element={<Guides />} />
         <Route path="/HelpCenter" element={<HelpCenter />} />
         <Route path="/Press" element={<Press />} />
+        <Route path="/Terms" element={<Terms />} />
+        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>

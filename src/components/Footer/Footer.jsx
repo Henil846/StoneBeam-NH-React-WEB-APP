@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useToast } from "../shared/SharedComponents";
 import "./Footer.component.css";
 import { FiInstagram, FiTwitter, FiFacebook, FiLinkedin, FiSend } from "react-icons/fi";
 
 const Footer = () => {
-  const navigate = useNavigate();
   const { addToast } = useToast();
   const [feedback, setFeedback] = useState("");
 
@@ -77,10 +76,10 @@ const Footer = () => {
           <div className="sb-footer-col">
             <h5>Company</h5>
             <ul>
-              <li><a onClick={() => navigate("/Aboutus")}>About Us</a></li>
-              <li><a onClick={() => navigate("/Career")}>Careers</a></li>
-              <li><a onClick={() => navigate("/Press")}>Press</a></li>
-              <li><a onClick={() => navigate("/Blog")}>Blog</a></li>
+              <li><Link to="/Aboutus">About Us</Link></li>
+              <li><Link to="/Career">Careers</Link></li>
+              <li><Link to="/Press">Press</Link></li>
+              <li><Link to="/Blog">Blog</Link></li>
             </ul>
           </div>
 
@@ -88,10 +87,10 @@ const Footer = () => {
           <div className="sb-footer-col">
             <h5>Resources</h5>
             <ul>
-              <li><a onClick={() => navigate("/Guides")}>Guides</a></li>
-              <li><a onClick={() => navigate("/HelpCenter")}>Help Center</a></li>
-              <li><a onClick={() => navigate("/Blog")}>Articles</a></li>
-              <li><a onClick={() => addToast('Terms of Service page — coming soon!', 'info')}>Terms</a></li>
+              <li><Link to="/Guides">Guides</Link></li>
+              <li><Link to="/HelpCenter">Help Center</Link></li>
+              <li><Link to="/Blog">Articles</Link></li>
+              <li><Link to="/Terms">Terms</Link></li>
             </ul>
           </div>
 
@@ -134,8 +133,8 @@ const Footer = () => {
         <div className="sb-footer-bottom">
           <p>© {new Date().getFullYear()} StoneBeam-NH. All rights reserved.</p>
           <div className="sb-footer-bottom-links">
-            <a onClick={() => addToast('Privacy Policy — coming soon!', 'info')}>Privacy Policy</a>
-            <a onClick={() => addToast('Terms of Service — coming soon!', 'info')}>Terms of Service</a>
+            <Link to="/PrivacyPolicy">Privacy Policy</Link>
+            <Link to="/Terms">Terms of Service</Link>
           </div>
         </div>
       </div>
